@@ -1,38 +1,23 @@
 /**
- * Created by lytte on 6/17/2016.
+ * Created by lytte on 6/27/2016.
+ *
+ * Purpose, rectangle area
  */
-import com.sun.corba.se.impl.presentation.rmi.ExceptionHandler;
+public class Chap1Exercise {
+    public static void main(String [] args) {
+        //taking 1.9
+        double width, height;
+        width = 4.5;
+        height = 7.9;
+        area(width, height);
+    }
+        //creates a method for finding the area of a rectangle
+        public static double area(double w, double h) {
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-public class Exercise1 {
-    public static void main(String[] args) {
-        Scanner key = new Scanner(System.in);
-        boolean again=false;
-
-         do {
-             int input = key.nextInt();
-             System.out.print("Here is your pent number, " + formula(input) + " input another? true/false ");
-
-             try{ again =key.nextBoolean();}
-             catch(InputMismatchException e) {
-                 System.out.println("Incorrect input, ending program");
-                 System.exit(0);
-             }
-
-        } while(again==true);
+        double print=w*h;
+        System.out.println("The area is " +print);
+        return print;
+    }
 
     }
-    public static int formula(int Tune) {
-//        int translate = Tune;
-//        translate*=3;
-//        translate-=1;
-//        translate*=Tune;
-//        translate/=2;
-//        base = translate;
-        Tune= Tune*(Tune*3 -1)/2;
-        int base = Tune; //dummy value
-        return base;
-    }
-}
 
